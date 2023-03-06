@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adftest0603"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"copyfiles_properties_pipeline1_parameters_filename": {
+			"value": "@triggerBody().fileName"
+		},
+		"copyfiles_properties_typeProperties_scope": {
+			"value": "/subscriptions/80ba6edd-08ac-416a-af2b-edf78a205fbd/resourceGroups/region0603/providers/Microsoft.Storage/storageAccounts/storagetest0603"
+		}
+	}
+}
