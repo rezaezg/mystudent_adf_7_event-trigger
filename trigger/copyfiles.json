@@ -1,0 +1,27 @@
+{
+	"name": "copyfiles",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"filename": "@trigger().outputs.body"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/80ba6edd-08ac-416a-af2b-edf78a205fbd/resourceGroups/region0603/providers/Microsoft.Storage/storageAccounts/storagetest0603",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
